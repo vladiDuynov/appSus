@@ -1,0 +1,5 @@
+.app-index .email-list {
+    border-radius: 10px;
+    background-color: var(--clr1);
+    height: calc(100vh - 64px) ;
+}

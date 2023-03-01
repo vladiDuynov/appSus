@@ -1,25 +1,18 @@
 // import CMP from './'
 export default {
-    props:[], 
+    props:['folders'], 
     template: `
     <section class="side-bar">
         <ul>
-            <li>
-               icon -Inbox  
-            </li>
-            <li>
-               icon -Sent  
-            </li>
-            <li>
-               icon -Removed  
+            <li v-for="folder in folders">
+               <img :src="folder.iconUrl">
+               <span>{{folder.title}}</span>  
             </li>
         </ul>
     </section>
     `,
     data(){
-        return {
-
-    }
+        return {    }
 },
     methods:{},
     computed:{},

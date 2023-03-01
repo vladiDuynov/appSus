@@ -4,4 +4,21 @@
   padding-right: 1.6rem;
 }
 
+.app-index {
+  display: grid;
+  grid-template-columns: 255px 1fr;
+  grid-template-rows: 64px 1fr;
+}
+
+.app-index .header {
+  grid-row: 1;
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: 255px 2fr 1fr;
+  grid-template-rows: 64px;
+}
+
+
+
 

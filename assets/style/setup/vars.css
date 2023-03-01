@@ -6,7 +6,9 @@
   --clr5: rgb(0, 0, 0);
 
   --clrbg: rgb(246 248 251);
-  --clrbg2: rgb(246 248 251);
+  --clrbg-input: rgb(235 241 250);
+  --clrbg-folders: rgb(214 226 251);
+  --clrbg-compose: rgb(201 230 252);
 
   --secondary-clr1: rgb(88, 201, 58);
   --secondary-clr2: rgb(122, 7, 70);

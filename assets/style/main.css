@@ -12,8 +12,11 @@
 @import 'cmps/HomePage.css';
 @import 'cmps/AppHeader.css';
 @import 'cmps/UserMsg.css';
-@import 'cmps/AppIndex.css';
 
 /* Apps */
 @import 'apps/mail/EmailIndex.css';
 @import 'apps/note/NoteIndex.css';
+
+@import 'cmps/AppIndexHeader.css';
+@import 'cmps/AppIndexSideBar.css';
+@import 'cmps/EmailList.css';

@@ -1,20 +1,22 @@
-* {
+/* * {
     background-color: var(--clrbg);
-}
-.app-index {
+} */
+/* .app-index {
     display: grid;
     grid-template-columns: 255px 1fr;
     grid-template-rows: 64px 1fr;
+} */
+.app-index{
+    background-color: var(--clrbg);
 }
-
 .app-index .header {
     background-color: transparent;
-    grid-row: 1;
+    /* grid-row: 1;
     grid-column: 1 / -1;
 
     display: grid;
     grid-template-columns: 255px 2fr 1fr;
-    grid-template-rows: 64px;
+    grid-template-rows: 64px; */
 }
 
 .app-index .header .logo {
@@ -30,8 +32,8 @@
 }
 
 .app-index .header input {
-    background-color: var(--clrbg2);
-    border-radius: 5px;
+    background-color: var(--clrbg-input);
+    border-radius: 8px;
     border: none;
     margin-block: 7px;
     font-size: 1rem;
@@ -46,19 +48,4 @@
     border: none;
     cursor: pointer;
     padding: 0;
-}
-
-.app-index .side-bar {
-    border: solid 1px red
-}
-
-.app-index .side-bar ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.app-index .email-list {
-    border-radius: 10px;
-    background-color: whitesmoke;
 }

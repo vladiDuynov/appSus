@@ -1,0 +1,34 @@
+.app-index .side-bar {
+    /* border: solid 1px red */
+}
+
+.app-index .side-bar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-block-start: 14px;
+}
+
+.app-index .side-bar ul li {
+    /* border: solid 1px red; */
+    /* padding: 5px; */
+    height: 2rem;
+    padding-inline-start: 30px;
+    margin-inline-end: 30px;
+    font-size: 14px;
+    color: var(--clr5);
+    display: flex;
+    place-items: center;
+    border-top-right-radius: 1rem ;
+    border-bottom-right-radius: 1rem ;
+}
+
+.app-index .side-bar ul li:first-child {
+    background-color: var(--clrbg-folders);
+}
+
+.app-index .side-bar ul li img {
+    height: 14px;
+    object-fit: contain;
+    margin-inline-end: 20px;
+}

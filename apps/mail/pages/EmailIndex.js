@@ -6,21 +6,30 @@ export default {
     // props:[], 
     template: `
     <section class="app-index">
-        <AppHeader/>
-        <AppSideBar/>
+        <AppHeader :logo="logo"/>
+        <AppSideBar :folders="folders"/>
         <EmailList/>
     </section>
     
     `,
-    data(){
+    data() {
         return {
-
-    }},
-    methods:{},
-    computed:{},
+            folders: [
+                { title: 'Inbox', iconUrl: '../../assets/imgs/inbox.png' },
+                { title: 'Sent', iconUrl: '../../assets/imgs/sent.png' },
+                { title: 'Trash', iconUrl: '../../assets/imgs/trash.png' },
+            ],
+            logo: {
+                name: 'Email',
+                iconUrl: '../../assets/imgs/gmail.png',
+            }
+        }
+    },
+    methods: {},
+    computed: {},
     // created(){},
     // etc.
-    components:{
+    components: {
         AppHeader,
         AppSideBar,
         EmailList
