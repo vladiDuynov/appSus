@@ -3,7 +3,7 @@ import AboutUs from './views/AboutUs.js'
 
 import KeepApp from './apps/keep/pages/NoteIndex.js'
 import MailApp from './apps/mail/pages/MailIndex.js'
-import BookApp from './apps/mail/pages/BookIndex.js'
+import BookApp from './apps/book/pages/BookIndex.js'
 
 
 const { createRouter, createWebHashHistory } = VueRouter

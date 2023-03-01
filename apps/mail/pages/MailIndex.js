@@ -2,7 +2,7 @@
 export default {
     // props:[], 
     template: `
-    <h1>Notes</h1>
+    <h1>Mails</h1>
     `,
     data(){return {
 
