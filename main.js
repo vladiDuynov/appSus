@@ -7,19 +7,29 @@ import AppFooter from './cmps/AppFooter.js'
 import UserMsg from './cmps/UserMsg.js'
 
 const options = {
-	template: `
+    template: `
         <section>
-            <AppHeader />
+            <AppHeader v-show="isShown"/>
             <RouterView />
-            <AppFooter />
+            <AppFooter v-show="false"/>
             <UserMsg />
         </section>
     `,
-	components: {
-		AppHeader,
-		AppFooter,
-		UserMsg,
-	},
+    data() {
+        return {
+
+        }
+    },
+    components: {
+        AppHeader,
+        AppFooter,
+        UserMsg,
+    },
+    copmuted: {
+        isShown() {
+            return false
+        },
+    }
 }
 
 const app = createApp(options)
