@@ -1,18 +1,15 @@
-// import CMP from './'
+import EmailPreview from './EmailPreview.js'
 export default {
-    // props:[], 
+    props:['emails'], 
     template: `
-    <section class="email-list">
+    <section class="email-list flex flex-column">
         <ul>
-            <li>
-                Checkboxes, Title, Subtitle, Preview, action-buttons
+            <li v-for="email in emails" :key="email.id">
+
+                <EmailPreview :email="email"/>
+
             </li>
-            <li>
-                Checkboxes, Title, Subtitle, Preview, action-buttons
-            </li>
-            <li>
-                Checkboxes, Title, Subtitle, Preview, action-buttons
-            </li>
+            
         </ul>
     </section>
     `,
@@ -23,5 +20,7 @@ export default {
     computed:{},
     // created(){},
     // etc.
-    // components:{},
+    components:{
+        EmailPreview,
+    },
 }

@@ -8,6 +8,7 @@
 } */
 .app-index{
     background-color: var(--clrbg);
+   
 }
 .app-index .header {
     background-color: transparent;

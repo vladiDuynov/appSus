@@ -1,5 +1,66 @@
 .app-index .email-list {
     border-radius: 10px;
     background-color: var(--clr1);
-    height: calc(100vh - 64px) ;
+    height: calc(100vh - 64px);
+}
+
+.email-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.email-list .email-preview {
+    width: calc(100vw - 272px);
+    height: 40px;
+
+    color: var(--clr5);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: var(--clrbg-input);
+    border-block-end: solid 1px  rgb(226 231 237);
+}
+
+.email-list .email-preview .checkboxes {
+    padding: 10px;
+    gap: 5px;
+}
+
+.email-list .email-preview .email-from {
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+}
+
+.email-list .email-preview .email-subject-body {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.email-list .email-preview .email-subject-body {
+    color: var(--clr4);
+    flex-grow: 1;
+}
+
+.email-list .email-preview .email-subject-body .subject {
+    color: var(--clr5);
+}
+
+.email-list .email-preview .email-sentAt {
+    margin-inline-end: 20px;
+    margin-inline-start: 52px;
+    font-size: 12px;
+}
+
+.email-list .email-preview.unread > * {
+    font-weight: bold;
+}
+.email-list .email-preview.unread{
+    border-block-end: solid 1px rgb(226 231 237);
+    background-color: transparent;
 }
