@@ -1,8 +1,24 @@
 // import CMP from './'
 export default {
-    props:['folders'], 
+    props: {
+        folders: {
+            type: Array,
+            required: true,
+        },
+        isEmail: {
+            type: Boolean,
+            required: false,
+            default: false,
+        },
+    },
+    // props:['folders', 'isEmail'], 
     template: `
-    <section class="side-bar">
+    <section class="side-bar flex-column">
+        
+        <button v-if="isEmail" class="compose-email flex align-center" @click="composeEmail">
+            <img class="icon-pencil" src="../../assets/imgs/pencil-tool.png">
+            Compose
+        </button>
         <ul>
             <li v-for="folder in folders">
                <img :src="folder.iconUrl">
@@ -14,7 +30,12 @@ export default {
     data(){
         return {    }
 },
-    methods:{},
+    methods:{
+        composeEmail(){
+            console.log('open composer')
+            this.$emit('openComposer')
+        }
+    },
     computed:{},
     // created(){},
     // etc.

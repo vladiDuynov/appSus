@@ -1,5 +1,21 @@
-.app-index .side-bar {
-    /* border: solid 1px red */
+/* .app-index .side-bar {} */
+.app-index .side-bar .compose-email {
+    margin-inline-start: 10px;
+    width: 200px;
+    height: 50px;
+
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: rgb(201 230 252);
+    cursor: pointer;
+}
+
+.app-index .side-bar .compose-email .icon-pencil {
+    height: 1rem;
+    object-fit: contain;
+    padding-inline: 20px;
 }
 
 .app-index .side-bar ul {
@@ -10,8 +26,6 @@
 }
 
 .app-index .side-bar ul li {
-    /* border: solid 1px red; */
-    /* padding: 5px; */
     height: 2rem;
     padding-inline-start: 30px;
     margin-inline-end: 30px;
@@ -19,8 +33,8 @@
     color: var(--clr5);
     display: flex;
     place-items: center;
-    border-top-right-radius: 1rem ;
-    border-bottom-right-radius: 1rem ;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 .app-index .side-bar ul li:first-child {

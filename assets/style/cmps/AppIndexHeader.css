@@ -32,12 +32,23 @@
     object-fit: contain;
 }
 
-.app-index .header input {
+.app-index .header .input {
     background-color: var(--clrbg-input);
     border-radius: 8px;
     border: none;
     margin-block: 7px;
+}
+.app-index .header .input svg {
+    color: var(--clr4);
+    margin-inline-start: 1.5rem;
+    height:1rem;
+    object-fit: contain;
+}
+
+.app-index .header .input input {
     font-size: 1rem;
+    background-color: transparent;
+    border: none;
 }
 
 .app-index .header .action-buttons{

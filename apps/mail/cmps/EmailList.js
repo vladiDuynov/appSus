@@ -6,7 +6,10 @@ export default {
         <ul>
             <li v-for="email in emails" :key="email.id">
 
-                <EmailPreview :email="email"/>
+                <EmailPreview 
+                :email="email"
+                @remove="remove"
+                @toggleIsRead="toggleIsRead"/>
 
             </li>
             
@@ -16,7 +19,16 @@ export default {
     data(){return {
 
     }},
-    methods:{},
+    methods:{
+        remove(event){
+            // console.log('removing?', event)
+            this.$emit('removeEmail', event)
+        },
+        toggleIsRead(event){
+            // console.log('toggleIsRead', event)
+            this.$emit('toggleIsRead', event)
+        }
+    },
     computed:{},
     // created(){},
     // etc.

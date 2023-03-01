@@ -15,6 +15,7 @@
 
 /* Apps */
 @import 'apps/mail/EmailIndex.css';
+@import 'apps/mail/EmailList.css';
 /* @import 'apps/keep/NoteIndex.css'; */
 @import 'apps/keep/keep-app.css';
 

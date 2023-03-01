@@ -2,7 +2,7 @@
 export default {
     props: ['email'],
     template: `
-    <article class="email-preview flex align-center " :class="isRead">
+    <article class="email-preview flex align-center " :class="isRead" @mouseover="onHover" @mouseleave="onOut">
         <!-- <div class="flex align-center"> -->
             <div class="checkboxes flex justify-center">
                 <input type="checkbox" class="selection">
@@ -13,21 +13,41 @@ export default {
             <div class="email-subject-body"><span class="subject">{{email.subject}}</span> - {{email.body}}</div>
         <!-- </div> -->
         
-        <div class="email-sentAt">{{date}}</div>
-        <!-- <div class="btns">
-
-        </div> -->
+        <div v-if="!isHovering" class="email-sentAt">{{date}}</div>
+        <div v-if="isHovering" class="btns">
+            <button @click="remove">
+                <img src="../../../assets/imgs/trash.png">
+            </button>
+            <button @click="toggleIsRead">
+                <img :src="isReadUrl">
+            </button>
+        </div>
     </article>
     `,
     data() {
         return {
-
+            isHovering: false,
         }
     },
-    methods: {},
+    methods: {
+        onHover() { // hide date show btns
+            this.isHovering = true
+        },
+        onOut(){
+            this.isHovering = false
+        },
+        remove(){
+            // console.log('removing?', this.email.id)
+            this.$emit('remove', this.email.id)
+        },
+        toggleIsRead(){
+            // console.log('toggleIsRead', this.email)
+            this.$emit('toggleIsRead', this.email.id)
+        }
+    },
     computed: {
-        isRead(){
-          return this.email.isRead ? '' : 'unread'  
+        isRead() {
+            return this.email.isRead ? '' : 'unread'
         },
         body() {
             return this.email.body.slice(0, 20)
@@ -41,6 +61,9 @@ export default {
                 day: 'numeric'
             }
             return new Intl.DateTimeFormat('en', option).format(date)
+        },
+        isReadUrl() {
+            return this.email.isRead ? '../../../assets/imgs/envelope.png' : '../../../assets/imgs/markread.png'
         }
     },
     // created(){},
