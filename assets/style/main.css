@@ -15,13 +15,13 @@
 
 /* Apps */
 @import 'apps/mail/EmailIndex.css';
-@import 'apps/note/NoteIndex.css';
+/* @import 'apps/keep/NoteIndex.css'; */
+@import 'apps/keep/note-app.css';
 
 @import 'cmps/AppIndexHeader.css';
 @import 'cmps/AppIndexSideBar.css';
 @import 'cmps/EmailList.css';
 @import 'apps/keep/add-note.css';
-@import 'apps/keep/keep-app.css';
 @import 'apps/keep/note-filter.css';
 @import 'apps/keep/note-list.css';
 @import 'apps/keep/note-preview.css';
