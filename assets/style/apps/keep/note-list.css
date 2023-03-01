@@ -1,0 +1,26 @@
+.notes {
+    padding: 10px;
+}
+
+.note-list {
+    position: relative;
+    column-count: 4;
+    column-gap: 10px;
+    padding: 10px 0;
+}
+
+.notes {
+    max-width: 100%;
+}
+
+.notes>* {
+    margin: 30px;
+}
+
+.pinned-headline {
+    color: gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-120%);
+}

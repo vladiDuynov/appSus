@@ -1,4 +1,3 @@
-'use strict'
 
 function createEventEmitter(defaultHandler = null){
     const listenersMap = {}
@@ -15,11 +14,6 @@ function createEventEmitter(defaultHandler = null){
     }
 }
 export const eventBus = createEventEmitter(() => console.log('No handler associated with this event...'))
-
-// const map = {
-//     'user-msg': [func1, func2],
-//     'test-event': [func3],
-// }
 
 
 export function showUserMsg(msg) {

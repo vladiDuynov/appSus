@@ -1,0 +1,50 @@
+.note-filter {
+    display: flex;
+    justify-content: center;
+    /* overflow: hidden; */
+}
+
+.note-filter nav {
+    width: 100%;
+}
+
+.note-filter nav>* {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    width: 100%;
+    padding: 8px 50px;
+    cursor: pointer;
+    transform: translateX(-20%);
+    border-radius: 5rem;
+    transition: background-color .3s;
+}
+
+.note-filter nav>*:hover {
+    background-color: rgba(211, 211, 211, 0.2)
+}
+
+.note-filter nav div:last-child {
+    margin-top: 20px;
+}
+
+.note-filter nav div:last-child input {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px;
+    margin: auto;
+}
+
+.note-filter nav div:last-child input:focus-visible {
+    outline: none;
+}
+
+.note-filter nav div:last-child:hover {
+    background-color: #FFF5E5;
+    cursor: default;
+}
+
+.note-filter img {
+    width: 25px;
+    margin-right: 5px;
+}
