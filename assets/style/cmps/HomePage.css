@@ -4,7 +4,7 @@
     width:fit-content;
 }
 
-img {
+.link-group img {
     width:200px;
     object-fit: contain;
     cursor: pointer;
@@ -12,6 +12,6 @@ img {
     transition: scale ease-in-out 0.2s;
 }
 
-img:hover {
+.link-group img:hover {
     scale:1.3;
 }
