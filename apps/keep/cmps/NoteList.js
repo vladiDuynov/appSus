@@ -6,11 +6,11 @@ export default {
         <section class="notes">
             <section class="note-list pinned-notes" v-if="pinnedNotes">
                 <h4 class="pinned-headline">Pinned</h4>
-                <note-preview v-for="note in pinnedNotes" :key="note.id" :note="note" @note-pinned="togglePin" @note-deleted="deleteNote" @note-bgc-updated="updateBgc" @todo-done="toggleTodo" @note-duplicate="duplicateNote" @editor-opened="openScreen" @note-edited="editNote" />
+                <notePreview v-for="note in pinnedNotes" :key="note.id" :note="note" @note-pinned="togglePin" @note-deleted="deleteNote" @note-bgc-updated="updateBgc" @todo-done="toggleTodo" @note-duplicate="duplicateNote" @editor-opened="openScreen" @note-edited="editNote" />
             </section>
             <section class="note-list un-pinned-notes" v-if="unPinnedNotes">
                 <h4 class="pinned-headline">Other</h4>
-                <NotePreview v-for="note in unPinnedNotes" :key="note.id" :note="note" @note-pinned="togglePin" @note-deleted="deleteNote" @note-bgc-updated="updateBgc" @todo-done="toggleTodo" @note-duplicate="duplicateNote" @editor-opened="openScreen" @note-edited="editNote" />
+                <notePreview v-for="note in unPinnedNotes" :key="note.id" :note="note" @note-pinned="togglePin" @note-deleted="deleteNote" @note-bgc-updated="updateBgc" @todo-done="toggleTodo" @note-duplicate="duplicateNote" @editor-opened="openScreen" @note-edited="editNote" />
             </section>
         </section>
     `,
@@ -19,7 +19,9 @@ export default {
     },
     created() {},
     data() {
-        return {}
+        return {
+            notes: [{},{}]
+        }
     },
     methods: {
         deleteNote(noteId) {

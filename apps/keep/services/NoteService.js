@@ -147,8 +147,7 @@ function _createNotes() {
                             todos: [
                                 { id: utilService.makeId(), txt: "Write code", doneAt: 187111111 },
                                 { id: utilService.makeId(), txt: "Stare at code untill realizing why it's not working", doneAt: null },
-                                { id: utilService.makeId(), txt: "Ask Amir for help and get no for an answer", doneAt: null },
-                                { id: utilService.makeId(), txt: "Box shadow everywhere", doneAt: 187111111 }
+                               
                             ],
                         },
                         style: {
@@ -184,7 +183,8 @@ function _createNotes() {
                         isPinned: false,
                         info: {
                             url: "https://www.youtube.com/watch?v=5X2MxY1nkqw",
-                            title: "Seal"
+                            title: "Seal",
+                             frameborder: "0"
 
                         },
                         style: {
