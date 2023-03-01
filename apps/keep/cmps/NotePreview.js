@@ -12,11 +12,11 @@ export default {
         <section :style="bgc" class="note">
             <component :is="note.type" :note="note" @click="openEditor(note.id)" @todo-done="toggleTodo"/>
             <div class="options">
-                <img class="note-icon paintbrush" src="img/keep-icons/paintbrush.png" @click="clickOpenPalette" @mouseover="openPalette" @mouseleave="closePalette"/>
-                <img @click="togglePin(note.id)" class="note-icon pin" :class="isPinned" src="img/keep-icons/pin.png" />
-                <img @click="duplicateNote(note.id)" class="note-icon duplicate" src="img/keep-icons/duplicate.png" />
-                <img @click="openEditor(note.id)" class="note-icon edit" src="img/keep-icons/edit.png" />
-                <img @click="deleteNote(note.id)" class="note-icon delete" src="img/keep-icons/delete.png"/>
+                <img class="note-icon paintbrush" src="assets/keepIcons/paintbrush.png" @click="clickOpenPalette" @mouseover="openPalette" @mouseleave="closePalette"/>
+                <img @click="togglePin(note.id)" class="note-icon pin" :class="isPinned" src="assets/keepIcons/pin.png" />
+                <img @click="duplicateNote(note.id)" class="note-icon duplicate" src="assets/keepIcons/duplicate.png" />
+                <img @click="openEditor(note.id)" class="note-icon edit" src="assets/keepIcons/edit.png" />
+                <img @click="deleteNote(note.id)" class="note-icon delete" src="assets/keepIcons/delete.png"/>
             </div>
             <div v-if="isPaletteOpen || isMouseOverPalette" class="color-palette" @mouseover="mouseOnPalette" @mouseleave="mouseLeftPalette">
                 <div class="color-choice" v-for="color in options" @click="updateBgc(note.id,color.color)" :style="'background-color:'+color.color"></div>
@@ -36,7 +36,7 @@ export default {
         <input @input="editNote(note.id)" v-if="editedNote.type === 'note-todos'" type="text" placeholder="Enter New Label" v-model="editedNote.info.label">
         <input v-if="editedNote.type === 'note-todos'" v-for="todo in note.info.todos" v-model="todo.txt" type="text" :style="todo.doneAt? 'text-decoration: line-through;' : ''">
         <div class="options-editing">
-                <img @click="deleteNote(note.id)" class="note-icon delete" src="img/keep-icons/delete.png"/>
+                <img @click="deleteNote(note.id)" class="note-icon delete" src="assets/keepIcons/delete.png"/>
         </div>
     </div>
         `,

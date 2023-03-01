@@ -2,12 +2,12 @@ export default {
     template: `
         <section class="note-filter">
             <nav>
-                    <div :style="filterBy.type === 'all' ? 'background-color: #ff9d93' : ''" @click="setFilter('all')" class="text"><img src="img/keep-icons/all.png"/> <span v-if="width>770">All</span></div>
-                    <div :style="filterBy.type === 'note-txt' ? 'background-color: #e8eaed' : ''" @click="setFilter('note-txt')" class="text"><img src="img/keep-icons/text.png"/> <span v-if="width>770"> Text </span></div>
-                    <div :style="filterBy.type === 'note-video' ? 'background-color: #e8eaed' : ''" @click="setFilter('note-video')" class="video"><img src="img/keep-icons/video.png"/> <span v-if="width>770"> Video </span></div>
-                    <div :style="filterBy.type === 'note-img' ? 'background-color: #e8eaed' : ''" @click="setFilter('note-img')" class="img"><img src="img/keep-icons/image.png"/><span v-if="width>770">Image </span></div>
-                    <div :style="filterBy.type === 'note-todos' ? 'background-color: #e8eaed' : ''" @click="setFilter('note-todos')" class="todos"><img src="img/keep-icons/list.png"/><span v-if="width>770">Todo Lists </span></div>
-                    <img v-if="width < 1070" src="img/keep-icons/text.png" @click="toggleTextSearch" />
+                    <div :style="filterBy.type === 'all' ? 'background-color: #ff9d93' : ''" @click="setFilter('all')" class="text"><img src="assets/keepIcons/all.png"/> <span v-if="width>770">All</span></div>
+                    <div :style="filterBy.type === 'note-txt' ? 'background-color: #e8eaed' : ''" @click="setFilter('note-txt')" class="text"><img src="assets/keepIcons/text.png"/> <span v-if="width>770"> Text </span></div>
+                    <div :style="filterBy.type === 'note-video' ? 'background-color: #e8eaed' : ''" @click="setFilter('note-video')" class="video"><img src="assets/keepIcons/video.png"/> <span v-if="width>770"> Video </span></div>
+                    <div :style="filterBy.type === 'note-img' ? 'background-color: #e8eaed' : ''" @click="setFilter('note-img')" class="img"><img src="assets/keepIcons/image.png"/><span v-if="width>770">Image </span></div>
+                    <div :style="filterBy.type === 'note-todos' ? 'background-color: #e8eaed' : ''" @click="setFilter('note-todos')" class="todos"><img src="assets/keepIcons/list.png"/><span v-if="width>770">Todo Lists </span></div>
+                    <img v-if="width < 1070" src="assets/keepIcons/text.png" @click="toggleTextSearch" />
                     <div @input="setFilter(filterBy.type)" class="text-search"><input type="text" @blur="toggleTextSearch" placeholder="Search By Text.." v-model="filterBy.txt" :class="textSearchDisplay"></div>
                 </nav>
         </section>

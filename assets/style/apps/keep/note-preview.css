@@ -1,0 +1,169 @@
+.note-container {
+    min-width: 250px;
+    box-shadow: 0 0 2px;
+    /* border-radius: .5em; */
+    display: inline-block;
+    margin: 10px;
+    margin-left: 50%;
+    margin-bottom: 30px;
+    transform: translateX(-50%);
+    transition: box-shadow .3s;
+}
+
+.note-container:hover {
+    box-shadow: 0 0 7px;
+}
+
+.note {
+    text-align: center;
+    /* border-radius: .5em; */
+    padding: 1rem 0 30px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    height: fit-content;
+    transition: border .3s, background-color .1s;
+    break-inside: avoid;
+}
+
+.note .note-img {
+    padding: 0;
+}
+
+.note .note-img img {
+    width: 100%;
+    transform: translateY(-1rem);
+    /* border-top-left-radius: .5em;
+    border-top-right-radius: .5em; */
+}
+
+.note .note-video iframe {
+    width: 100%;
+    transform: translateY(-1rem);
+    /* border-top-left-radius: .5em;
+    border-top-right-radius: .5em; */
+}
+
+.note:hover .note-icon {
+    opacity: 1;
+}
+
+.note-icon {
+    width: 15px;
+    position: absolute;
+    bottom: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.note-icon.delete {
+    background: none;
+    cursor: pointer;
+    left: 5px;
+}
+
+.note:hover .note-icon {
+    display: block;
+}
+
+.note-icon.paintbrush {
+    right: 5px;
+}
+
+.note-icon.pin {
+    right: 30px;
+}
+
+.note-icon.duplicate {
+    right: 55px;
+}
+
+.note-icon.edit {
+    right: 80px;
+}
+
+.note-icon.pin.pinned {
+    transform: rotateZ(-45deg);
+}
+
+.note input {
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.editing-cmd input {
+    opacity: 1;
+    width: 100%;
+    pointer-events: auto;
+}
+
+.editing-cmd {
+    min-width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    border-radius: 10px;
+    padding: 0 0 50px;
+}
+
+.editing-cmd img {
+    max-width: 40vw;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* padding: 15px; */
+}
+
+.editing-cmd input {
+    border: none;
+    height: 40px;
+    background: none;
+    padding-left: 10px;
+    color: #1b1b1bc7
+}
+
+.editing-cmd input.title-input {
+    font-size: 1.5rem;
+}
+
+.editing-cmd input.txt-input {
+    font-size: 1.2rem;
+    padding-left: 20px;
+}
+
+.editing-cmd input:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.editing-cmd .note-icon {
+    opacity: 1;
+}
+
+.color-palette {
+    position: absolute;
+    padding: 5px;
+    display: flex;
+    bottom: 0;
+    transform: translateY(100%);
+}
+
+.color-palette .color-choice {
+    margin: 0 2px;
+    z-index: 5;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
