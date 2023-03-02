@@ -74,6 +74,12 @@
     color: var(--clr4);
 }
 
+.app-index .email-details .removedAt {
+    margin-inline: 4rem;    
+    font-size:12px;
+    font-weight: bold;
+}
+
 .app-index .email-details .body {
     color: var(--clr5);
     padding-block: 1rem;

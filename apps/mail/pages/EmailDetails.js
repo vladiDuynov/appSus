@@ -21,7 +21,7 @@ export default {
                 </div>
             </div>
             
-            <div v-if="email.removedAt" class="removedAt">You moved this email to the trash on {{email.removedAt}}</div>
+            <div v-if="email.removedAt" class="removedAt">You sent this email to the trash on {{dateRem}}</div>
             <div class="body">{{email.body}}</div>
         </section>
     `,
@@ -45,6 +45,18 @@ export default {
         },
         date() {
             const date = new Date(this.email.sentAt)
+            // return `${date.getMonth()} ${date.getDay()}`            
+
+            const option = {
+                month: 'short',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+            }
+            return new Intl.DateTimeFormat('en', option).format(date)
+        },
+        dateRem() {
+            const date = new Date(this.email.removedAt)
             // return `${date.getMonth()} ${date.getDay()}`            
 
             const option = {

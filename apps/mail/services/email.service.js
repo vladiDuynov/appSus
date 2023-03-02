@@ -37,7 +37,7 @@ let gEmails = [
     {
         id: 'e104',
         subject: 'Second round',
-        body: `let's see who wins the battle...` ,
+        body: `let's see who wins the battle...`,
         isRead: false,
         sentAt: 1551132970594,
         removedAt: 1551132990594,
@@ -114,6 +114,8 @@ export const emailService = {
     remove,
     save,
     getEmptyEmail,
+    toggleIsRead,
+    removeEmail,
 }
 
 function query(filterBy = {}) {
@@ -168,6 +170,29 @@ function getEmptyEmail() {
         from: null,
         to: null
     }
+}
+
+function removeEmail(emailId) {
+    get(emailId)
+        .then(email => {
+            // console.log(email)
+            if (email.removedAt) remove(emailId) // if email was removed already=removedAt has a truthy value, removing again means removing from trash so deleting 
+            else { // if email never removed, just "send to trash" by adding removedAt value
+                email.removedAt = Date.now()
+                save(email)
+                console.log('remove email done')
+            }
+        })
+}
+
+function toggleIsRead(emailId) {
+    get(emailId)
+        .then(email => {
+            email.isRead = !email.isRead
+            // console.log(email)
+            save(email)
+            console.log('is read toggle done')
+        })
 }
 
 function _createEmails() {

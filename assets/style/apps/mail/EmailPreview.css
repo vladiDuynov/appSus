@@ -58,7 +58,7 @@
 }
 
 .email-list .email-preview.unread {
-    border-block-end: solid 1px rgb(226 231 237);
+    border-block-end: solid 1px var(--clrbg-prev-read);
     background-color: transparent;
 }
 
@@ -72,11 +72,11 @@
 
 .email-list .email-preview .btns button:hover {
     border-radius: 50%;
-    background-color: rgb(232 234 239);
+    background-color: var(--clrbg-btn1);
 }
 
 .email-list .email-preview.unread .btns button:hover {
-    background-color: rgb(242 242 241);
+    background-color: var(--clrbg-btn2);
 }
 
 .email-list .email-preview .btns img {

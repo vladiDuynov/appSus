@@ -43,7 +43,7 @@
     cursor: pointer;
 }
 
-.app-index .side-bar ul li:first-child {
+.app-index .side-bar ul li.selected {
     background-color: var(--clrbg-folders);
 }
 
@@ -51,4 +51,8 @@
     height: 14px;
     object-fit: contain;
     margin-inline-end: 20px;
+}
+
+.app-index .side-bar ul li:hover {
+    background-color: var(--clrbg-btn1);
 }

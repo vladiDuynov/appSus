@@ -20,26 +20,39 @@ export default {
             Compose
         </button>
         <ul>
-            <li v-for="folder in folders" @click="setFilterBy(folder.title)">
+            <li v-for="folder in folders" :class="folder.title===folder?'selected' : ''" @click="setFilterBy(folder.title)">
                <img :src="folder.iconUrl">
                <span>{{folder.title}}</span>  
             </li>
         </ul>
     </section>
     `,
-    data(){
-        return {    }
-},
-    methods:{
-        composeEmail(){
+    data() {
+        return {
+            folderName: 'Inbox',
+            // currFolder:'',
+        }
+    },
+    methods: {
+        composeEmail() {
             console.log('open composer')
             this.$emit('openComposer')
         },
-        setFilterBy(folderTitle){
+        setFilterBy(folderTitle) {
+
             console.log(folderTitle)
+            this.folderName = folderTitle
+            this.$emit('setFilter', folderTitle)
         }
     },
-    computed:{},
+    computed: {
+        // isSelected() {
+        //     // if  return  'selected'
+        //     // else return '' 
+
+        //     return  (folder === this.filterBy.folder) ? 'selected' : ''
+        // }
+    },
     // created(){},
     // etc.
     // components:{},

@@ -11,14 +11,21 @@ export default {
 
         <AppHeader :logo="logo"/>
 
-        <AppSideBar :folders="folders" :isEmail="true" @openComposer="openComposer"/>
+        <AppSideBar 
+        :folders="folders" 
+        :isEmail="true" 
+        @openComposer="openComposer"
+        @setFilter="setFilter"
+        />
         
         <ComposeEmail v-if="isComposing" @sendEmail="sendEmail"/>
 
         <RouterView 
-        :emails="emails" 
+        v-if="emails"
+        :emails="processedEmails" 
         @removeEmail="removeEmail"
         @toggleIsRead="toggleIsRead"
+        @setSort="setSort"
         />
     </section>
     
@@ -35,7 +42,8 @@ export default {
                 iconUrl: '../../assets/imgs/gmail.png',
             },
             emails: null,
-            filterBy: '',
+            filterBy: { folder: 'Inbox' },
+            sortBy: 'date',
             isComposing: false,
         }
     },
@@ -44,30 +52,22 @@ export default {
             console.log('compose', this.isComposing)
             if (!this.isComposing) this.isComposing = true // for now- allow only opening one composer at a time
         },
-        removeEmail(event) { // event is email.id
-            console.log('remove email', event)
-            emailService.get(event)
-                .then(email => {
-                    // console.log(email)
-                    if (email.removedAt) emailService.remove(event) // if email was removed already=removedAt has a truthy value, removing again means removing from trash so deleting 
-                    else { // if email never removed, just "send to trash" by adding removedAt value
-                        email.removedAt = Date.now()
-                        emailService.save(email)
-                    }
-                })
+        removeEmail(emailId) {
+            console.log('remove email', emailId)
+
+            const idx = this.emails.findIndex(email => email.id === emailId)
+            var emailRemovedAt = this.emails[idx].removedAt
+            if (emailRemovedAt) this.emails.splice(idx, 1)
+            else this.emails[idx].removedAt = Date.now()
+
+            emailService.removeEmail(emailId)
         },
-        toggleIsRead(event) { // event is email.id
-            console.log('toggleIsRead', event)
-            emailService.get(event)
-                .then(email => {
-                    // console.log(email)
-                    email.isRead = !email.isRead
-                    emailService.save(email)
-                })
-            emailService.query()
-                .then(emails => {
-                    this.emails = emails
-                })
+        toggleIsRead(emailId) {
+            console.log('toggleIsRead', emailId)
+            const idx = this.emails.findIndex(email => email.id === emailId)
+            this.emails[idx].isRead = !this.emails[idx].isRead
+
+            emailService.toggleIsRead(emailId)
         },
         sendEmail(event) {
             // console.log('send email :', event)
@@ -81,21 +81,55 @@ export default {
             newEmail.body = body
             newEmail.sentAt = Date.now()
             newEmail.isRead = true
-            // console.log('newEmail', newEmail)
-            emailService.save(newEmail) // NEED TO REFRESH LIST
-            // console.log('emails', this.emails)
+
+            this.emails.push(newEmail)
+            emailService.save(newEmail)
 
             eventBus.emit('show-msg', { txt: 'Sent Email', type: 'success' })
-
+        },
+        setFilter(folderTitle) {
+            this.filterBy.folder = folderTitle
+        },
+        setSort(sortByVal) {
+            this.sortBy = sortByVal
+            console.log('sortByVal', sortByVal)
         },
         loadEmails() {
             emailService.query()
                 .then(emails => this.emails = emails)
-        }
+        },
     },
     computed: {
         filteredEmails() {
-            return this.emails.filter()
+            if (this.filterBy.folder === 'Inbox') {
+                var filteredEm = this.emails.filter(email => {
+                    return email.to === 'thisisme@appsus.com' && !email.removedAt
+                    console.log('filtering')
+                })
+                return filteredEm
+
+            } else if (this.filterBy.folder === 'Sent') {
+                return this.emails.filter(email => {
+                    return email.from === 'thisisme@appsus.com' && !email.removedAt
+                    console.log('filtering')
+                })
+            } else if (this.filterBy.folder === 'Trash') {
+                return this.emails.filter(email => {
+                    return email.removedAt
+                    console.log('filtering')
+                })
+            }
+        },
+        processedEmails() {
+            let emailsFiltered = this.filteredEmails
+
+            if (this.sortBy ==='date') {
+                emailsFiltered.sort((email1, email2) => (email1.sentAt - email2.sentAt)) // * this.sortBy.price
+            } else if (this.sortBy === 'subject') {
+                emailsFiltered.sort((email1, email2) => email1.subject.localeCompare(email2.subject)) // * this.sortBy.title
+            }
+
+            return emailsFiltered
         }
     },
     created() {
@@ -106,7 +140,6 @@ export default {
             this.loadEmails()
         }
     },
-    // etc.
     components: {
         AppHeader,
         AppSideBar,
