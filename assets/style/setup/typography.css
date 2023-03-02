@@ -5,3 +5,21 @@
     font-family: roboto;
     src: url('../../fonts/roboto/Roboto-Regular.ttf');
 }
+
+@font-face {
+    font-family: googlesans;
+    src: url('../../fonts/google/ProductSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: fas;
+    src: url('../../fonts/fontAwesome/fa-solid-900.ttf');
+}
+
+.fas::before {
+    font-family: fas;
+}
+
+.fas.arrow-left::before {
+    content: '\f060';
+}

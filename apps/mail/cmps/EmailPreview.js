@@ -2,27 +2,31 @@
 export default {
     props: ['email'],
     template: `
-    <article class="email-preview flex align-center " :class="isRead" @mouseover="onHover" @mouseleave="onOut">
-        <!-- <div class="flex align-center"> -->
-            <div class="checkboxes flex justify-center">
-                <input type="checkbox" class="selection">
-                <input type="checkbox" class="star">   
-            </div>
+    <article class="email-preview flex align-center " :class="isRead"  @mouseover="onHover" @mouseleave="onOut">
+        <div class="checkboxes flex justify-center">
+            <input type="checkbox" class="selection">
+            <input type="checkbox" class="star">   
+        </div>
 
-            <div class="email-from">{{email.from}}</div>
-            <div class="email-subject-body"><span class="subject">{{email.subject}}</span> - {{email.body}}</div>
-        <!-- </div> -->
+        <div class="email-from">{{email.from}}</div>
+
+        <div class="email-subject-body">
+            <span class="subject">{{email.subject}}</span> - {{email.body}}
+        </div>
         
         <div v-if="!isHovering" class="email-sentAt">{{date}}</div>
+
         <div v-if="isHovering" class="btns">
-            <button @click="remove">
+            <button @click.stop="remove">
                 <img src="../../../assets/imgs/trash.png">
             </button>
-            <button @click="toggleIsRead">
+            <button @click.stop="toggleIsRead">
                 <img :src="isReadUrl">
             </button>
         </div>
     </article>
+
+    
     `,
     data() {
         return {
@@ -33,17 +37,17 @@ export default {
         onHover() { // hide date show btns
             this.isHovering = true
         },
-        onOut(){
+        onOut() {
             this.isHovering = false
         },
-        remove(){
+        remove() {
             // console.log('removing?', this.email.id)
             this.$emit('remove', this.email.id)
         },
-        toggleIsRead(){
-            // console.log('toggleIsRead', this.email)
+        toggleIsRead() {
+            console.log('toggleIsRead', this.email.id)
             this.$emit('toggleIsRead', this.email.id)
-        }
+        },
     },
     computed: {
         isRead() {
@@ -58,7 +62,10 @@ export default {
 
             const option = {
                 month: 'short',
-                day: 'numeric'
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                // hour12: false,
             }
             return new Intl.DateTimeFormat('en', option).format(date)
         },

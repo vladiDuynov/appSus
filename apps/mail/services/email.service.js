@@ -11,7 +11,7 @@ let gEmails = [
         isRead: false,
         sentAt: 1551133930594,
         removedAt: null,
-        from: 'momo@momo.com',
+        from: 'mimi@mimi.com',
         to: 'thisisme@appsus.com'
     },
     {
@@ -114,9 +114,6 @@ export const emailService = {
     remove,
     save,
     getEmptyEmail,
-    addReview,
-    removeReview,
-    addGoogleEmail,
 }
 
 function query(filterBy = {}) {
@@ -174,10 +171,10 @@ function getEmptyEmail() {
 }
 
 function _createEmails() {
-    let emails = utilService.loadFromStorage(EMAIL_KEY)
+    let emails = loadFromStorage(EMAIL_KEY)
     if (!emails || !emails.length) {
         emails = gEmails
-        utilService.saveToStorage(EMAIL_KEY, emails)
+        saveToStorage(EMAIL_KEY, emails)
     }
 }
 
@@ -187,3 +184,11 @@ function _createEmail(title, price = 50) {
     return email
 }
 
+function saveToStorage(key, value) {
+    localStorage.setItem(key, JSON.stringify(value) || null)
+}
+
+function loadFromStorage(key) {
+    let data = localStorage.getItem(key)
+    return (data) ? JSON.parse(data) : undefined
+}

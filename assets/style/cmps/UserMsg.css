@@ -10,7 +10,7 @@
     /* transition: opacity 1s; */
 }
 .success {
-    background-color: rgb(88, 130, 88);
+    background-color: var(--clrbg-compose);
 }
 .error {
     background-color: rgb(187, 104, 104);

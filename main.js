@@ -7,7 +7,7 @@ import UserMsg from './cmps/UserMsg.js'
 const options = {
     template: `
         <section>
-            <AppHeader v-show="isShown"/>
+            <AppHeader v-show="false"/>
             <RouterView />
             <AppFooter v-show="false"/>
             <UserMsg />

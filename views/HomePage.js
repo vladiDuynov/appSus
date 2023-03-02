@@ -1,4 +1,3 @@
-
 export default {
     template: `
         <section class="home-page">
@@ -7,7 +6,7 @@ export default {
                 <RouterLink to="/keep">
                     <img src="../assets/imgs/keep.png">
                 </RouterLink>
-                <RouterLink to="/email">
+                <RouterLink to="/email/inbox">
                     <img src="../assets/imgs/gmail.png">
                 </RouterLink>
                 <RouterLink to="/book">

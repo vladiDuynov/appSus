@@ -1,0 +1,96 @@
+.app-index .compose-email {
+    position: absolute;
+    bottom: 0;
+    right: 4rem;
+
+    width: 510px;
+    height: 480px;
+
+    box-shadow: 0px 0px 4px 1px var(--clr4);
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    background-color: var(--clr1);
+}
+
+
+.app-index .compose-email .compose-header {
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    background-color: var(--clrbg-input);
+    padding-inline: 1rem;
+
+    height: 40px;
+
+}
+
+.app-index .compose-email .compose-header h1 {
+    margin: 0;
+    color: var(--clr5);
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.app-index .compose-email .compose-header .btn-close-composer {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.app-index .compose-email .composer-form {
+    padding-inline: 1rem;
+}
+
+.app-index .compose-email .composer-form input {
+    border: none;
+    padding: 0;
+}
+
+
+.app-index .compose-email .composer-form .to-container {
+    height: 40px;
+    border-bottom: solid 1px var(--clrbg-input);
+    color: var(--clr5);
+}
+
+.app-index .compose-email .composer-form .to-container input {
+    flex-grow: 1;
+    font-size: 1rem;
+    margin-inline: 1rem;
+}
+
+.app-index .compose-email .composer-form .to-container input:focus-visible,
+.app-index .compose-email .composer-form #input-subject:focus-visible,
+.app-index .compose-email .composer-form #input-body {
+    outline: none;
+    border: none;
+}
+
+.app-index .compose-email .composer-form #input-subject {
+    height: 40px;
+    border-bottom: solid 1px var(--clrbg-input);
+    display: block;
+    width: 100%;
+}
+
+.app-index .compose-email .composer-form #input-body {
+    display: block;
+    height: calc(480px - 40px - 40px - 40px - 50px);
+    /* border-bottom: solid 1px var(--clrbg-input); */
+}
+
+.app-index .compose-email .composer-form .btn-send-email {
+    border: none;
+    border-radius: 20px;
+    
+    align-self: start;
+    margin-block: 5px;
+    padding: 10px;
+    padding-inline: 20px;
+    background-color: var(--clr-btn);
+    color: white;
+    
+    cursor: pointer;
+}
+.app-index .compose-email .composer-form .btn-send-email:hover {
+    box-shadow: 0px 0px 3px 1px var(--clr3);
+}
