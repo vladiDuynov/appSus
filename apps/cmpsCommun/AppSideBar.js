@@ -20,7 +20,7 @@ export default {
             Compose
         </button>
         <ul>
-            <li v-for="folder in folders" :class="folder.title===folder?'selected' : ''" @click="setFilterBy(folder.title)">
+            <li v-for="folder in folders" :class="folder.title===folderName?'selected' : ''" @click="setFilterBy(folder.title)">
                <img :src="folder.iconUrl">
                <span>{{folder.title}}</span>  
             </li>
