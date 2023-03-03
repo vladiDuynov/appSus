@@ -1,0 +1,104 @@
+.book-app .book-details {
+    border: none;
+    padding: 10px;
+    font-family: calibri;
+    gap:2rem;
+    
+    margin: 20px;
+}
+
+.book-app .book-details .details-container {
+    justify-content: start;
+    gap:50px;
+}
+
+.book-app .book-details .details-container .details {
+    min-width: 300px;
+    max-width:600px;
+    overflow-y: visible;
+}
+
+.book-app .book-details .details-container img {
+    min-width:100px;
+    max-width: 200px;
+
+    align-self: start;
+    object-fit: contain;
+}
+
+.book-app .book-details .details-container .details .title,
+.book-app .book-details .details-container .details .price {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.book-app .book-details .details-container .details .price {
+    align-self: end;
+}
+
+.book-app .book-details .details-container .details  .title:not(span) {
+    text-transform: uppercase;
+}
+
+.book-app .book-details .details-container .details button {
+    align-self: end;
+}
+
+.book-app .book-details .details-container .details h1,
+.book-app .book-details .details-container .details h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.book-app .book-details .details-container .details h1 {
+    margin-block-end: 10px;
+}
+
+.book-app .book-details .details-container .details span:not(.price-amount) {
+    color: brown;
+    font-size: 0.8rem;
+    font-weight:bold;
+}
+
+.book-app .book-details .details-container .details .authors {
+    font-size: 1rem;
+    font-weight: bold;
+    color: brown;
+}
+
+.book-app .book-details .details-container .details .authors,
+.book-app .book-details .details-container .details .categories {
+    padding: 0;
+    margin: 0;
+    margin-block-end: 10px;
+}
+
+.book-app .book-details .details-container .details span.red {
+    color: red
+}
+
+.book-app .book-details .details-container .details span.green {
+    color: green
+}
+
+.book-app .book-details .details-container .details h1.on-sale {
+    color: firebrick;
+    font-weight: bold;
+    align-self: center;
+    text-transform: uppercase;
+    background-color: blanchedalmond;
+}
+
+.book-app .book-details .links > * {
+    color: var(--clrbg-dark);
+    text-decoration:underline ;
+    border-radius: 5px;    
+    padding: 5px;
+    
+}
+
+.book-app .book-details .links > *:hover {
+    text-decoration:none ;
+    background-color:var(--clrtxt);
+}

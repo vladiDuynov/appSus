@@ -1,0 +1,11 @@
+
+.book-app html {
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    font-family: lato;
+}
+
+.book-app img {
+    width:100%;
+    object-fit: cover;
+}
+

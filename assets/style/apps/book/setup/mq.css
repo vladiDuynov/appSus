@@ -1,0 +1,40 @@
+/* SMALL: */
+
+@media (max-width: 620px) {
+    .book-app .app-header nav {
+        flex-direction: column;
+        transform: translateY(-100vh);
+        transition: transform 0.6s;
+        position: absolute;
+        top: 80px;
+        right: -2rem;
+        background-color: var(--clrbg-dark);
+    }
+
+    .book-app .app-header nav a {
+        text-align: center;
+        border-bottom: solid 1px var(--clrtxt);
+    }
+
+    .book-app .app-header nav .router-link-active {
+        background-color: cadetblue;
+        box-shadow: none;
+    }
+
+    .book-app .btn-ham-menu::before {
+        content: '☰';
+        font-size: 3rem;
+        cursor: pointer;
+        margin-inline-end: 2rem;
+    }
+    .book-app .app-header.hamb-menu-open .btn-ham-menu::before {
+        content: 'X';
+    }
+
+    .book-app .app-header.hamb-menu-open nav {
+        transform: translateY(0);
+    }
+    .book-app .logo * {
+        font-size: 1.8rem;
+    }
+}

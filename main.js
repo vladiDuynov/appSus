@@ -7,15 +7,15 @@ import UserMsg from './cmps/UserMsg.js'
 const options = {
     template: `
         <section>
-            <AppHeader v-show="false"/>
-            <RouterView />
-            <AppFooter v-show="false"/>
+            <AppHeader v-if="isMain"/>
+            <RouterView @hideMain='hideMain' @showMain="showMain" />
+            <AppFooter v-if="isMain"/>
             <UserMsg />
         </section>
     `,
     data() {
         return {
-
+            isMain: false,
         }
     },
     components: {
@@ -23,11 +23,20 @@ const options = {
         AppFooter,
         UserMsg,
     },
-    copmuted: {
-        isShown() {
-            return false
+    methods: {
+        hideMain(){
+            this.isMain = false
         },
-    }
+        showMain(){
+            this.isMain = true
+        }
+    },
+    created() {
+        this.isMain = true
+    },
+    // unmounted() {
+    //     this.isMain = false
+    // }
 }
 
 const app = createApp(options)

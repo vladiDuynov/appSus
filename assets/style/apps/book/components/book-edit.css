@@ -1,0 +1,77 @@
+.book-app .btn-add-wrapper {
+    background-color: var(--clrtxt);
+    padding: 5px;
+    padding-inline-start: 42px;
+    display: flex;
+    justify-content: end;
+}
+
+.book-app .btn-add {
+    font-family: inherit;
+
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease-out, color 0.4s ease-out;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--clrbg);
+    color: var(--clrtxt);
+    margin-inline-end: 42px;
+}
+
+.book-app .btn-add:hover {
+    background-color: transparent;
+    color: rgb(46, 21, 21);
+}
+
+.book-app .book-edit {
+    border: none;
+    border-radius: 10px;
+    width: 400px;
+    min-height: 50vh;
+    margin-inline: auto;
+    padding: 10px;
+    background-color: var(--clrtxt);
+    /* font-family: calibri; */
+    color: brown;
+    margin-block: 20px;
+
+    position: relative;
+}
+
+.book-app .book-edit h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-block-end: 10px;
+}
+
+.book-app .book-edit .form {
+    align-items: start;
+    gap: 10px
+}
+
+.book-app .book-edit .form .btn-save {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    font-family: inherit;
+    background-color: lightgreen;
+    color: brown;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease-out, color 0.4s ease-out;
+}
+
+.book-app .book-edit .form .btn-save:hover {
+    background-color: green;
+    color: var(--clrtxt);
+}
+
+.book-app .book-edit .form .new-price {
+    display: flex;
+    gap: 10px
+}

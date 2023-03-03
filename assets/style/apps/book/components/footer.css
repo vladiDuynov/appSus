@@ -1,0 +1,8 @@
+.book-app footer {
+    background-color: var(--clrbg);
+    color: var(--clrtxt);
+    font-size: 1rem;
+    padding: 1rem;
+
+    width: 100%;
+}

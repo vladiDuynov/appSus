@@ -1,0 +1,18 @@
+.book-app .book-details .read-more {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.book-app .book-details p {
+    margin-block: 0;
+    font-style: italic;
+    display: inline;
+}
+
+.book-app .book-details .read-more:hover {
+    text-decoration: none;
+}

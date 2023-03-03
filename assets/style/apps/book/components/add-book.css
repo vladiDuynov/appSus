@@ -1,0 +1,57 @@
+.book-app .book-add {
+    margin: 20px;
+}
+
+.book-app .book-add form {
+    padding: 10px;
+    align-self: center;
+}
+
+.book-app .book-add form input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px cadetblue;
+    width: 200px
+}
+
+.book-app .book-add h1 {
+    margin: 0;
+    margin-block-start: 10px;
+    color: var(--clrbg);
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.book-app .book-add .google-book-list {
+    margin: 0;
+    padding: 10px;
+    padding-block-start: 0;
+}
+
+.book-app .book-add .google-book-list>* {
+    padding: 10px;
+    border-bottom: solid 1px grey;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.book-app .book-add .google-book-list>*:hover {
+    background-color: var(--clrtxt);
+    cursor: default;
+}
+
+
+.book-app .book-add .google-book-list>* button {
+    background-color: cadetblue;
+    border: none;
+    box-shadow: 0px 0px 2px 0px grey;
+    border-radius: 5px;
+    height: fit-content;
+    cursor: pointer;
+    transition: scale 0.2s ease-in-out;
+    ;
+}
+
+.book-app .book-add .google-book-list>* button:hover {
+    scale: 1.2;
+}

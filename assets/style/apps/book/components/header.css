@@ -1,0 +1,41 @@
+.book-app .app-header {
+    background-color: var(--clrbg);
+    color: var(--clrtxt);
+    margin-inline: 0;
+}
+
+.book-app .app-header nav {
+    margin-inline-end: 2rem;
+}
+.book-app .app-header nav .home-link img {
+    width:20px;
+    aspect-ratio: 1;
+}
+
+.book-app .app-header nav a {
+    /* display: block; */
+    padding: 1.25rem;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.book-app .app-header nav a:last-child {
+    border-inline-start: solid 1px var(--clrtxt);
+}
+
+.book-app .app-header nav a:hover {
+    background-color: var(--clrtxt);
+    color: var(--clrbg );
+}
+
+.book-app .app-header nav a.selected {
+    box-shadow: inset 0px -4px grey;
+}
+
+.book-app .app-header nav .router-link-active {
+    box-shadow: 0px 5px 0px 0px  var(--clrtxt);
+}

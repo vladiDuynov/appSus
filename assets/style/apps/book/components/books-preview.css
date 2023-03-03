@@ -1,0 +1,23 @@
+.book-app .book-preview h2 {
+    margin: 0;
+    font-family: Arial;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin-block: 10px;
+}
+
+.book-app .book-preview h2 span {
+    font-size: 0.7rem;
+    font-style: italic;
+    color: grey;
+}
+
+.book-app .book-preview img {
+    height: 100px;
+    object-fit: contain;
+    aspect-ratio: 1 ;
+}
+
+.book-app .book-preview .price {
+    text-align : end;
+}

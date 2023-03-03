@@ -5,7 +5,7 @@ export default {
         <section class="compose-email">
             <div class="compose-header flex align-center justify-between">
                 <h1>New Email</h1>
-                <button class="btn-close-composer" title="Discard email">X</button>
+                <button class="btn-close-composer" title="Discard email" @click="closeComposer">X</button>
             </div>
             
             <form class="composer-form flex flex-column" @submit.stop="sendEmail">
@@ -38,6 +38,9 @@ export default {
         sendEmail(){
             console.log(this.newEmail)
             this.$emit('sendEmail', this.newEmail)
+        },
+        closeComposer(){
+            this.$emit('closeComposer')
         }
     },
     computed: {},

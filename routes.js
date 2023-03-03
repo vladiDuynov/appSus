@@ -3,9 +3,13 @@ import AboutUs from './views/AboutUs.js'
 
 import KeepApp from './apps/keep/pages/NoteIndex.js'
 import EmailIndex from './apps/mail/pages/EmailIndex.js'
-import BookApp from './apps/book/pages/BookIndex.js'
+
 import EmailDetails from './apps/mail/pages/EmailDetails.js'
 import EmailList from './apps/mail/cmps/EmailList.js'
+import BookApp from './apps/book/pages/BookApp.js'
+// import BookDetails from './apps/book/pages/BookDetails.js'
+// import BookEdit from './apps/book/pages/BookEdit.js'
+// import BookAdd from './apps/book/pages/BookAdd.js'
 
 
 const { createRouter, createWebHashHistory } = VueRouter
@@ -41,13 +45,22 @@ const routerOptions = {
 				},
 			]
 		},
-
 		{
-			path: '/book',
-			component: BookApp,
-		},
-
-
+            path: '/books',
+            component: BookApp
+        },
+        // {
+        //     path:'/books/:bookId',
+        //     component:BookDetails
+        // },
+        // {
+        //     path:'/books/edit/:bookId?',
+        //     component: BookEdit
+        // },
+        // {
+        //     path:'/addBook',
+        //     component: BookAdd
+        // },
 	],
 }
 

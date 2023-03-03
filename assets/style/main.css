@@ -11,6 +11,7 @@
 /* General Components */
 @import 'cmps/HomePage.css';
 @import 'cmps/AppHeader.css';
+@import 'cmps/AppFooter.css';
 @import 'cmps/UserMsg.css';
 
 /* Apps */
@@ -19,6 +20,30 @@
 @import 'apps/mail/EmailPreview.css';
 @import 'apps/mail/EmailDetails.css';
 @import 'apps/mail/ComposeEmail.css';
+
+/* @import 'apps/book/styles.css' */
+@import 'apps/book/basics/base.css';
+@import 'apps/book/basics/helpers.css';
+@import 'apps/book/basics/layout.css';
+@import 'apps/book/components/add-book.css';
+@import 'apps/book/components/add-review.css';
+@import 'apps/book/components/book-details.css';
+@import 'apps/book/components/book-edit.css';
+@import 'apps/book/components/books-preview.css';
+@import 'apps/book/components/books.css';
+@import 'apps/book/components/filter.css';
+@import 'apps/book/components/footer.css';
+@import 'apps/book/components/header.css';
+@import 'apps/book/components/logo.css';
+@import 'apps/book/components/longtxt.css';
+@import 'apps/book/components/review-list.css';
+@import 'apps/book/components/review-preview.css';
+@import 'apps/book/components/user-msg.css';
+@import 'apps/book/setup/mq.css';
+@import 'apps/book/setup/typography.css';
+@import 'apps/book/setup/vars.css';
+
+
 
 /* @import 'apps/keep/NoteIndex.css'; */
 @import 'apps/keep/keep-app.css';

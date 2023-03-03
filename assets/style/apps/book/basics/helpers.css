@@ -1,0 +1,33 @@
+.book-app .flex {
+    display: flex;
+}
+
+.book-app .column {
+    flex-direction: column;
+}
+
+.book-app .align-center {
+    align-items: center;
+}
+
+.book-app .space-between {
+    justify-content: space-between;
+}
+
+.book-app .space-evenly {
+    justify-content: space-evenly;
+}
+
+.book-app .justify-center {
+    justify-content: center;
+}
+
+.book-app .grid {
+    display: grid;
+}
+
+.book-app .clean-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

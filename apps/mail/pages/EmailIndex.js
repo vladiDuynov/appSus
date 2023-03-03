@@ -18,7 +18,7 @@ export default {
         @setFilter="setFilter"
         />
         
-        <ComposeEmail v-if="isComposing" @sendEmail="sendEmail"/>
+        <ComposeEmail v-if="isComposing" @sendEmail="sendEmail" @closeComposer="closeComposer"/>
 
         <RouterView 
         v-if="emails"
@@ -87,6 +87,9 @@ export default {
 
             eventBus.emit('show-msg', { txt: 'Sent Email', type: 'success' })
         },
+        closeComposer() {
+            this.isComposing = false
+        },
         setFilter(folderTitle) {
             this.filterBy.folder = folderTitle
         },
@@ -123,7 +126,7 @@ export default {
         processedEmails() {
             let emailsFiltered = this.filteredEmails
 
-            if (this.sortBy ==='date') {
+            if (this.sortBy === 'date') {
                 emailsFiltered.sort((email1, email2) => (email1.sentAt - email2.sentAt)) // * this.sortBy.price
             } else if (this.sortBy === 'subject') {
                 emailsFiltered.sort((email1, email2) => email1.subject.localeCompare(email2.subject)) // * this.sortBy.title
@@ -134,6 +137,7 @@ export default {
     },
     created() {
         this.loadEmails()
+        this.$emit('hideMain')
     },
     watch: {
         emails1() {

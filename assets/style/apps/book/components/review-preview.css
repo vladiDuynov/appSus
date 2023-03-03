@@ -1,0 +1,16 @@
+.book-app .review-list ul li .review-preview {
+    gap:10px;
+}
+
+.book-app .review-list ul li .review-preview h2 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.book-app .review-list ul li .review-preview span {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: normal;
+    /* color: black; */
+
+}

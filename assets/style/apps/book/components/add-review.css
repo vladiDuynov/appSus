@@ -1,0 +1,51 @@
+.book-app .add-review {
+    padding: 5px;
+    box-shadow: -4px -4px 0px 0px var(--clrtxt);
+    /* max-width: 600px; */
+}
+
+.book-app .add-review h1 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-inline-start: 20px;
+}
+
+.book-app .add-review .review-form {
+    align-items: start;
+    gap: 10px;
+    margin-inline-start: 30px;
+    padding-inline-start: 20px;
+    box-shadow: -4px 0px 0px 0px var(--clrbg);
+}
+
+
+.book-app .add-review .review-form input:not([type="radio"]),
+/* .book-app .add-review .review-form select, */
+.book-app .add-review .review-form button {
+    line-height: 1.5;
+    padding-inline: 5px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 0px grey;
+}
+.book-app .add-review .review-form button {
+    cursor: pointer;
+}
+
+/* .book-app .add-review .review-form select {
+    width: fit-content;
+    padding-block: 3px;
+} */
+
+.book-app .add-review .review-form label {
+    font-style: italic;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.book-app .add-review .review-form button {
+    width: 60px;
+    background-color: palegreen;
+    align-self: start;
+}

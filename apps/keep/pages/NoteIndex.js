@@ -21,11 +21,13 @@ export default {
         noteFilter,
     },
     created() {
+        this.$emit('hideMain')
         noteService._createNotes()
             .then(notes => {
                 this.pinnedNotes = notes.filter(note => note.isPinned)
                 this.unPinnedNotes = notes.filter(note => !note.isPinned)
             })
+
     },
     data() {
         return {

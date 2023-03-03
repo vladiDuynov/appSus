@@ -1,0 +1,23 @@
+.book-app .book-filter {
+    background-color: var(--clrtxt);
+    padding: 10px;
+    padding-inline-start: 42px;
+}
+
+.book-app .book-filter input[type="text"] {
+    margin-inline-end: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px grey;
+}
+
+.book-app .book-filter input {
+    margin-inline: 10px;
+    padding: 10px;
+    border: none;
+}
+
+.book-app .book-filter label {
+    color: var(--clrbg);
+}
