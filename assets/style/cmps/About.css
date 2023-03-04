@@ -1,0 +1,11 @@
+.about-page {
+    height: calc(100vh - 140px);
+}
+.about-page h1 {
+text-align: center;    
+padding:20px;
+font-size: 40px;
+}
+.about-page p {
+    text-align: center;
+}

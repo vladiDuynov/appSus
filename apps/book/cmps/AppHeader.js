@@ -4,8 +4,8 @@ export default {
         <h1 class="logo"><RouterLink to="/">Miss Book</RouterLink></h1>
         <div class="btn-ham-menu" @click="toggleMenu"></div>
         <nav class="flex">
-            <RouterLink to="/books">Books</RouterLink>
-            <RouterLink to="/addBook">Add Book</RouterLink>
+            <RouterLink to="/books/index">Books</RouterLink>
+            <RouterLink to="/books/addBook">Add Book</RouterLink>
             <RouterLink class="home-link" to="/">
                 <img src="../assets/imgs/home.png">
             </RouterLink>

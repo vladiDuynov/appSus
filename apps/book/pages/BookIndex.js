@@ -9,9 +9,10 @@ import { eventBusService } from '../services/event-bus.service.js'
 export default {
     template: `
     <section class="book-index">
-        <BookFilter @filter="setFilterBy"/>
+        <BookFilter @filter="setFilterBy"
+        v-if="books && !isDetails && !isEditing" />
         <div class="btn-add-wrapper" >
-            <RouterLink class="btn-add" to="/books/edit">Add a book</RouterLink>
+            <button class="btn-add" @click="editBook" >Add a book</button>
         </div>
         <BookList 
             :books="filteredBooks" 

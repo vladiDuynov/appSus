@@ -5,15 +5,15 @@ export default {
             <h2>One place to access all your apps</h2>
             
             <div class="link-group flex align-center">
-                <RouterLink to="/keep">
+                <!-- <RouterLink to="/keep">
                     <img src="../assets/imgs/keep.png">
                     Keep ** IN DEV **
-                </RouterLink>
+                </RouterLink> -->
                 <RouterLink to="/email/inbox" >
                     <img src="../assets/imgs/gmail.png">
                     Email
                 </RouterLink>
-                <RouterLink to="/books" >
+                <RouterLink to="/books/index" >
                     <img src="../assets/imgs/books.png">
                     Books
                 </RouterLink>

@@ -3,10 +3,10 @@ export default {
     // props:[], 
     template: `
         <div class="mini-menu flex align-center" >
-            <RouterLink to="/keep">
+            <!-- <RouterLink to="/keep">
                 <img src="../../assets/imgs/keep.png">
                 <div>Keep</div>
-            </RouterLink>
+            </RouterLink> -->
             <RouterLink to="/email/inbox">
                 <img src="../../assets/imgs/gmail.png">
                 <div>Email</div>
