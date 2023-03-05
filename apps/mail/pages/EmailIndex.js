@@ -33,13 +33,13 @@ export default {
     data() {
         return {
             folders: [
-                { title: 'Inbox', iconUrl: '../../assets/imgs/inbox.png' },
-                { title: 'Sent', iconUrl: '../../assets/imgs/sent.png' },
-                { title: 'Trash', iconUrl: '../../assets/imgs/trash.png' },
+                { title: 'Inbox', iconUrl: 'assets/imgs/inbox.png' },
+                { title: 'Sent', iconUrl: 'assets/imgs/sent.png' },
+                { title: 'Trash', iconUrl: 'assets/imgs/trash.png' },
             ],
             logo: {
                 name: 'Email',
-                iconUrl: '../../assets/imgs/gmail.png',
+                iconUrl: 'assets/imgs/gmail.png',
             },
             emails: null,
             filterBy: { folder: 'Inbox' },

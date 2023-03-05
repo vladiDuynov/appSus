@@ -15,10 +15,10 @@ export default {
 
             <div class="action-buttons flex align-center">
                 <RouterLink to="/">
-                    <img src="../assets/imgs/home.png">
+                    <img src="assets/imgs/home.png">
                 </RouterLink>
                 <button @click="toggleMiniMenu">
-                    <img src="../assets/imgs/menu.png">
+                    <img src="assets/imgs/menu.png">
                 </button>
             </div>
 

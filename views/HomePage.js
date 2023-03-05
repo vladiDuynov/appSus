@@ -10,11 +10,11 @@ export default {
                     Keep ** IN DEV **
                 </RouterLink> -->
                 <RouterLink to="/email/inbox" >
-                    <img src="../assets/imgs/gmail.png">
+                    <img src="assets/imgs/gmail.png">
                     Email
                 </RouterLink>
                 <RouterLink to="/books/index" >
-                    <img src="../assets/imgs/books.png">
+                    <img src="assets/imgs/books.png">
                     Books
                 </RouterLink>
             </div>
