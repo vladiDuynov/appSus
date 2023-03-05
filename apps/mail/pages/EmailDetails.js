@@ -6,12 +6,12 @@ export default {
         <section v-if="email" class="email-details">
 
             <RouterLink to="/email/inbox" class="back-link">
-                <img src="../../../assets/imgs/output-onlinepngtools.png">
+                <img src="assets/imgs/output-onlinepngtools.png">
             </RouterLink>
 
             <div class="subject">{{email.subject}}</div>
             <div class="flex">
-                <img src="../../../assets/imgs/user.png">
+                <img src="assets/imgs/user.png">
                 <div class="email-info flex align-center justify-between">
                     <div class="flex flex-column">    
                         <div class="from"><span>From : </span>{{email.from}}</div>
