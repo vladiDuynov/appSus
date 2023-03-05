@@ -4,7 +4,7 @@ export default {
     template: `
         <div class="mini-menu flex align-center" >
             <!-- <RouterLink to="/keep">
-                <img src="../../assets/imgs/keep.png">
+                <img src="assets/imgs/keep.png">
                 <div>Keep</div>
             </RouterLink> -->
             <RouterLink to="/email/inbox">
