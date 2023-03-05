@@ -16,7 +16,7 @@ export default {
     <section class="side-bar flex-column">
         
         <button v-if="isEmail" class="compose-email-btn flex align-center" @click="composeEmail">
-            <img class="icon-pencil" src="../../assets/imgs/pencil-tool.png">
+            <img class="icon-pencil" src="assets/imgs/pencil-tool.png">
             Compose
         </button>
         <ul>

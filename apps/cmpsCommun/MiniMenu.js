@@ -8,11 +8,11 @@ export default {
                 <div>Keep</div>
             </RouterLink> -->
             <RouterLink to="/email/inbox">
-                <img src="../../assets/imgs/gmail.png">
+                <img src="assets/imgs/gmail.png">
                 <div>Email</div>
             </RouterLink>
             <RouterLink to="/books">
-                <img src="../../assets/imgs/books.png">
+                <img src="assets/imgs/books.png">
                 <div>Books</div>
             </RouterLink>
         </div>
