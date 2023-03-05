@@ -11,7 +11,7 @@ export default {
                 <img src="assets/imgs/gmail.png">
                 <div>Email</div>
             </RouterLink>
-            <RouterLink to="/books">
+            <RouterLink to="/books/index">
                 <img src="assets/imgs/books.png">
                 <div>Books</div>
             </RouterLink>
