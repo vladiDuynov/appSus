@@ -18,7 +18,7 @@ export default {
 
         <div v-if="isHovering" class="btns">
             <button @click.stop="remove">
-                <img src="../../../assets/imgs/trash.png">
+                <img src="assets/imgs/trash.png">
             </button>
             <button @click.stop="toggleIsRead">
                 <img :src="isReadUrl">
@@ -70,7 +70,7 @@ export default {
             return new Intl.DateTimeFormat('en', option).format(date)
         },
         isReadUrl() {
-            return this.email.isRead ? '../../../assets/imgs/envelope.png' : '../../../assets/imgs/markread.png'
+            return this.email.isRead ? 'assets/imgs/envelope.png' : 'assets/imgs/markread.png'
         }
     },
     // created(){},
